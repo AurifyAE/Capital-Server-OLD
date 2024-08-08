@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 4000;
 
 const API_ENDPOINT = 'https://api-capital.backend-capital.com/api/v1/markets?searchTerm=GOLD';
 const HEADERS = {
-    'X-SECURITY-TOKEN': 'CEfdjhvvmlkhYRLM7X0KnmzG5fbnBU3',
-    'CST': 'H0j8gFnP23153d0hFL1iM5vW'
+    'X-SECURITY-TOKEN': 'p74Ud9T9sPJNgw9HjcERwEddaB7tYfd',
+    'CST': 'BBEhoSd9QrIdlxUpaCkqm0Jg'
 };
 
 const app = express();
@@ -25,7 +25,7 @@ async function fetchMarketDataAndEmit() {
     try {
         const response = await axios.get(API_ENDPOINT, { headers: HEADERS });
         const marketData = response.data;
-        console.log(marketData);
+        // console.log(marketData);
         
         io.emit('goldValue', marketData.markets[0]); // Emitting market data to all connected clients
     } catch (error) {
