@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 4000;
 
 const API_ENDPOINT = 'https://api-capital.backend-capital.com/api/v1/markets?searchTerm=GOLD';
 const HEADERS = {
-    'X-SECURITY-TOKEN': 'p74Ud9T9sPJNgw9HjcERwEddaB7tYfd',
-    'CST': 'BBEhoSd9QrIdlxUpaCkqm0Jg'
+    'X-SECURITY-TOKEN': 'FDrHsEu8nGzH8XyYkRiPZmQsVjI1Xb3',
+    'CST': 'z9FXyhK7MU9EYekWOZZmKJP9'
 };
 
 const app = express();
